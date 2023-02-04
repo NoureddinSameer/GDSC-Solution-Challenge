@@ -17,7 +17,7 @@ if ($Check) {
     $partnerAge = $i['age'];
     $partnerAddress = $i['address'];
     
-    $partnerComments = $i['partnerComments'];
+    $partnerComments = $i['comments'];
     $partnerPhone = $i['phone'];
     $partnerEmail = $i['email'];
     $partnerPassword = $i['password'];
@@ -46,7 +46,7 @@ if (isset($_POST['update'])) {
 
 
     $update = "UPDATE `lawyers` SET  firstname='$partnerName1',secondname='$partnerName2',age=$partnerAge,
-    address='$partnerAddress',comments=$partnerComments,
+    address='$partnerAddress',comments='$partnerComments',
     phone='$partnerPhone',email='$partnerEmail',`password`='$partnerPassword',image='$image_name' WHERE id=$id";
     $CheckUpdate = mysqli_query($connection, $update);
 
